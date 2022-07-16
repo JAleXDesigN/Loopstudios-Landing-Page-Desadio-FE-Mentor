@@ -1,0 +1,33 @@
+@use 'base/variables' as v;
+
+.boton-relleno {
+    background-color: v.$negro;
+    color: v.$blanco;
+    text-transform: uppercase;
+    padding: 1.4rem 4rem;
+    letter-spacing: .6rem;
+    &:hover {
+        border: 1px solid v.$blanco;
+        outline: 1px solid v.$negro;  
+    }
+}
+
+.boton-border {
+    border: .15rem solid v.$negro;
+    color: v.$negro;
+    text-transform: uppercase;
+    padding: 1.4rem 5rem;
+    letter-spacing: .6rem;
+    margin: 0 auto;
+    &:hover,
+    &:focus {
+        animation: hover .8s;
+        box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0);
+    }   
+}  
+@keyframes hover {
+    0% {
+      box-shadow: 0 0 0 0 v.$negro;
+    }
+}
+

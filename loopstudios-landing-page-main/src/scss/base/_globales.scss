@@ -1,0 +1,92 @@
+@use 'variables' as v;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: v.$fuente-1;
+    font-size: 1.8rem;
+
+    &.fijar-body {
+        overflow: hidden;
+    }
+    &.body-scroll {
+        padding-top: 8.6rem;
+    }
+}
+p {
+    line-height: 1.2;
+}
+.contenedor {
+    width: 90%;
+    max-width: 115rem;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+ul {
+    margin: 0;
+}
+li {
+    list-style: none; 
+}
+h1, h2 {
+    font-family: v.$fuente-2;
+    color: v.$negro;
+    font-weight: 400;
+}
+h3 {
+    color: v.$blanco;
+    font-family: v.$fuente-2;
+    font-weight: 200;
+    font-size: 3.5rem;
+}
+p {
+    font-family: v.$fuente-2;
+    font-weight: 300;
+}
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    
+}
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+.efecto-hover {
+    position: relative;
+    padding: .58rem 0;
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 30%;
+        width: 40%;
+        height: 2px;
+        background: v.$blanco;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .3s ease-in-out;
+    }  
+    &:hover::before {
+        transform: scaleX(1);
+        transform-origin: center;
+    }           
+}
+

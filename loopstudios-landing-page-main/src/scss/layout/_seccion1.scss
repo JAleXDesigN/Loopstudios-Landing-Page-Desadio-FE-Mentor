@@ -1,0 +1,83 @@
+@use 'base/variables' as v;
+
+.seccion-1 {
+    @media (min-width:982px) {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        position: relative;
+        margin-top: 15rem;
+        .img-section-1 {
+            position: relative;
+        }
+        .info-section-1 {
+            padding: 8rem;
+            width: 50%;
+            max-width: 65%;
+            max-height: 100%;
+            right: 0;
+            bottom: -10rem;
+            position: absolute;
+            z-index: 10;
+            background-color: v.$blanco;
+            box-shadow: v.$grisOscuro;
+            h2 {
+                font-size: 3vw;
+                text-transform: uppercase;
+                line-height: 1;
+                margin: 0;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    @media only screen and (min-width:768px) and (max-width:981px){
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 1rem;
+        margin-top: 5rem;
+        .img-section-1 {
+            display: flex;
+            align-items: center;
+        }
+        .info-section-1 {
+            padding: 2rem;
+            background-color: v.$blanco;
+            box-shadow: v.$grisOscuro;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2 {
+                font-size: 3rem;
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 1rem;
+                margin-top: 0;
+            }
+            p {
+                font-size: 2rem;
+                text-align: center;
+                margin: 0;
+            }
+        }
+    }
+    @media only screen and (max-width:767px) {
+        margin-top: 10rem;
+        .info-section-1 {
+            padding: 5rem 2rem;
+            background-color: v.$blanco;
+            h2 {
+                font-size: 3rem;
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            p {
+                text-align: center;
+                font-size: 2rem;
+                margin: 0;
+            }
+        }
+    }
+
+}
